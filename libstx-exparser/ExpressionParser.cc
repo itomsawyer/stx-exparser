@@ -150,7 +150,7 @@ struct ExpressionGrammar : public grammar<ExpressionGrammar>
 
             varname
                 = lexeme_d[ 
-		    token_node_d[ alpha_p >> *(alnum_p | ch_p('_')) ]
+		    token_node_d[ alpha_p >> *(alnum_p | ch_p('_') | ch_p('.') | ch_p('[') | ch_p(']')) ]
                     ]
                 ;
 

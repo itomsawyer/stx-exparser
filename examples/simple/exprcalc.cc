@@ -58,6 +58,9 @@ int main(int argc, char *argv[])
     // evaluate the expression with a very simple symbol table
     stx::BasicSymbolTable bst;
     bst.setVariable("x", 42);
+    bst.setVariable("a.b", 12);
+    bst.setVariable("a[1].b", 10);
+    bst.setVariable("a.b[1]", 1.1);
 
     try
     {
