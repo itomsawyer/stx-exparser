@@ -16718,8 +16718,8 @@ fi
 
 # check for Boost.Spirit
 if test "${ac_cv_header_boost_spirit_core_hpp+set}" = set; then
-  { $as_echo "$as_me:$LINENO: checking for boost/spirit/core.hpp" >&5
-$as_echo_n "checking for boost/spirit/core.hpp... " >&6; }
+  { $as_echo "$as_me:$LINENO: checking for boost/spirit/home/classic/core.hpp" >&5
+$as_echo_n "checking for boost/spirit/home/classic/core.hpp... " >&6; }
 if test "${ac_cv_header_boost_spirit_core_hpp+set}" = set; then
   $as_echo_n "(cached) " >&6
 fi
@@ -16727,8 +16727,8 @@ fi
 $as_echo "$ac_cv_header_boost_spirit_core_hpp" >&6; }
 else
   # Is the header compilable?
-{ $as_echo "$as_me:$LINENO: checking boost/spirit/core.hpp usability" >&5
-$as_echo_n "checking boost/spirit/core.hpp usability... " >&6; }
+{ $as_echo "$as_me:$LINENO: checking boost/spirit/home/classic/core.hpp usability" >&5
+$as_echo_n "checking boost/spirit/home/classic/core.hpp usability... " >&6; }
 cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
 _ACEOF
@@ -16736,7 +16736,7 @@ cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
 $ac_includes_default
-#include <boost/spirit/core.hpp>
+#include <boost/spirit/home/classic/core.hpp>
 _ACEOF
 rm -f conftest.$ac_objext
 if { (ac_try="$ac_compile"
@@ -16769,15 +16769,15 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 $as_echo "$ac_header_compiler" >&6; }
 
 # Is the header present?
-{ $as_echo "$as_me:$LINENO: checking boost/spirit/core.hpp presence" >&5
-$as_echo_n "checking boost/spirit/core.hpp presence... " >&6; }
+{ $as_echo "$as_me:$LINENO: checking boost/spirit/home/classic/core.hpp presence" >&5
+$as_echo_n "checking boost/spirit/home/classic/core.hpp presence... " >&6; }
 cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
 _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
-#include <boost/spirit/core.hpp>
+#include <boost/spirit/home/classic/core.hpp>
 _ACEOF
 if { (ac_try="$ac_cpp conftest.$ac_ext"
 case "(($ac_try" in
@@ -16811,30 +16811,30 @@ $as_echo "$ac_header_preproc" >&6; }
 # So?  What about this header?
 case $ac_header_compiler:$ac_header_preproc:$ac_cxx_preproc_warn_flag in
   yes:no: )
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/core.hpp: accepted by the compiler, rejected by the preprocessor!" >&5
-$as_echo "$as_me: WARNING: boost/spirit/core.hpp: accepted by the compiler, rejected by the preprocessor!" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/core.hpp: proceeding with the compiler's result" >&5
-$as_echo "$as_me: WARNING: boost/spirit/core.hpp: proceeding with the compiler's result" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/core.hpp: accepted by the compiler, rejected by the preprocessor!" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/core.hpp: accepted by the compiler, rejected by the preprocessor!" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/core.hpp: proceeding with the compiler's result" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/core.hpp: proceeding with the compiler's result" >&2;}
     ac_header_preproc=yes
     ;;
   no:yes:* )
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/core.hpp: present but cannot be compiled" >&5
-$as_echo "$as_me: WARNING: boost/spirit/core.hpp: present but cannot be compiled" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/core.hpp:     check for missing prerequisite headers?" >&5
-$as_echo "$as_me: WARNING: boost/spirit/core.hpp:     check for missing prerequisite headers?" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/core.hpp: see the Autoconf documentation" >&5
-$as_echo "$as_me: WARNING: boost/spirit/core.hpp: see the Autoconf documentation" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/core.hpp:     section \"Present But Cannot Be Compiled\"" >&5
-$as_echo "$as_me: WARNING: boost/spirit/core.hpp:     section \"Present But Cannot Be Compiled\"" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/core.hpp: proceeding with the preprocessor's result" >&5
-$as_echo "$as_me: WARNING: boost/spirit/core.hpp: proceeding with the preprocessor's result" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/core.hpp: in the future, the compiler will take precedence" >&5
-$as_echo "$as_me: WARNING: boost/spirit/core.hpp: in the future, the compiler will take precedence" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/core.hpp: present but cannot be compiled" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/core.hpp: present but cannot be compiled" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/core.hpp:     check for missing prerequisite headers?" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/core.hpp:     check for missing prerequisite headers?" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/core.hpp: see the Autoconf documentation" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/core.hpp: see the Autoconf documentation" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/core.hpp:     section \"Present But Cannot Be Compiled\"" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/core.hpp:     section \"Present But Cannot Be Compiled\"" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/core.hpp: proceeding with the preprocessor's result" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/core.hpp: proceeding with the preprocessor's result" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/core.hpp: in the future, the compiler will take precedence" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/core.hpp: in the future, the compiler will take precedence" >&2;}
 
     ;;
 esac
-{ $as_echo "$as_me:$LINENO: checking for boost/spirit/core.hpp" >&5
-$as_echo_n "checking for boost/spirit/core.hpp... " >&6; }
+{ $as_echo "$as_me:$LINENO: checking for boost/spirit/home/classic/core.hpp" >&5
+$as_echo_n "checking for boost/spirit/home/classic/core.hpp... " >&6; }
 if test "${ac_cv_header_boost_spirit_core_hpp+set}" = set; then
   $as_echo_n "(cached) " >&6
 else
@@ -16859,8 +16859,8 @@ fi
 
 
 if test "${ac_cv_header_boost_spirit_phoenix_hpp+set}" = set; then
-  { $as_echo "$as_me:$LINENO: checking for boost/spirit/phoenix.hpp" >&5
-$as_echo_n "checking for boost/spirit/phoenix.hpp... " >&6; }
+  { $as_echo "$as_me:$LINENO: checking for boost/spirit/home/classic/phoenix.hpp" >&5
+$as_echo_n "checking for boost/spirit/home/classic/phoenix.hpp... " >&6; }
 if test "${ac_cv_header_boost_spirit_phoenix_hpp+set}" = set; then
   $as_echo_n "(cached) " >&6
 fi
@@ -16868,8 +16868,8 @@ fi
 $as_echo "$ac_cv_header_boost_spirit_phoenix_hpp" >&6; }
 else
   # Is the header compilable?
-{ $as_echo "$as_me:$LINENO: checking boost/spirit/phoenix.hpp usability" >&5
-$as_echo_n "checking boost/spirit/phoenix.hpp usability... " >&6; }
+{ $as_echo "$as_me:$LINENO: checking boost/spirit/home/classic/phoenix.hpp usability" >&5
+$as_echo_n "checking boost/spirit/home/classic/phoenix.hpp usability... " >&6; }
 cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
 _ACEOF
@@ -16877,7 +16877,7 @@ cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
 $ac_includes_default
-#include <boost/spirit/phoenix.hpp>
+#include <boost/spirit/home/classic/phoenix.hpp>
 _ACEOF
 rm -f conftest.$ac_objext
 if { (ac_try="$ac_compile"
@@ -16910,15 +16910,15 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 $as_echo "$ac_header_compiler" >&6; }
 
 # Is the header present?
-{ $as_echo "$as_me:$LINENO: checking boost/spirit/phoenix.hpp presence" >&5
-$as_echo_n "checking boost/spirit/phoenix.hpp presence... " >&6; }
+{ $as_echo "$as_me:$LINENO: checking boost/spirit/home/classic/phoenix.hpp presence" >&5
+$as_echo_n "checking boost/spirit/home/classic/phoenix.hpp presence... " >&6; }
 cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
 _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
-#include <boost/spirit/phoenix.hpp>
+#include <boost/spirit/home/classic/phoenix.hpp>
 _ACEOF
 if { (ac_try="$ac_cpp conftest.$ac_ext"
 case "(($ac_try" in
@@ -16952,30 +16952,30 @@ $as_echo "$ac_header_preproc" >&6; }
 # So?  What about this header?
 case $ac_header_compiler:$ac_header_preproc:$ac_cxx_preproc_warn_flag in
   yes:no: )
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/phoenix.hpp: accepted by the compiler, rejected by the preprocessor!" >&5
-$as_echo "$as_me: WARNING: boost/spirit/phoenix.hpp: accepted by the compiler, rejected by the preprocessor!" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/phoenix.hpp: proceeding with the compiler's result" >&5
-$as_echo "$as_me: WARNING: boost/spirit/phoenix.hpp: proceeding with the compiler's result" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/phoenix.hpp: accepted by the compiler, rejected by the preprocessor!" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/phoenix.hpp: accepted by the compiler, rejected by the preprocessor!" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/phoenix.hpp: proceeding with the compiler's result" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/phoenix.hpp: proceeding with the compiler's result" >&2;}
     ac_header_preproc=yes
     ;;
   no:yes:* )
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/phoenix.hpp: present but cannot be compiled" >&5
-$as_echo "$as_me: WARNING: boost/spirit/phoenix.hpp: present but cannot be compiled" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/phoenix.hpp:     check for missing prerequisite headers?" >&5
-$as_echo "$as_me: WARNING: boost/spirit/phoenix.hpp:     check for missing prerequisite headers?" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/phoenix.hpp: see the Autoconf documentation" >&5
-$as_echo "$as_me: WARNING: boost/spirit/phoenix.hpp: see the Autoconf documentation" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/phoenix.hpp:     section \"Present But Cannot Be Compiled\"" >&5
-$as_echo "$as_me: WARNING: boost/spirit/phoenix.hpp:     section \"Present But Cannot Be Compiled\"" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/phoenix.hpp: proceeding with the preprocessor's result" >&5
-$as_echo "$as_me: WARNING: boost/spirit/phoenix.hpp: proceeding with the preprocessor's result" >&2;}
-    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/phoenix.hpp: in the future, the compiler will take precedence" >&5
-$as_echo "$as_me: WARNING: boost/spirit/phoenix.hpp: in the future, the compiler will take precedence" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/phoenix.hpp: present but cannot be compiled" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/phoenix.hpp: present but cannot be compiled" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/phoenix.hpp:     check for missing prerequisite headers?" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/phoenix.hpp:     check for missing prerequisite headers?" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/phoenix.hpp: see the Autoconf documentation" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/phoenix.hpp: see the Autoconf documentation" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/phoenix.hpp:     section \"Present But Cannot Be Compiled\"" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/phoenix.hpp:     section \"Present But Cannot Be Compiled\"" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/phoenix.hpp: proceeding with the preprocessor's result" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/phoenix.hpp: proceeding with the preprocessor's result" >&2;}
+    { $as_echo "$as_me:$LINENO: WARNING: boost/spirit/home/classic/phoenix.hpp: in the future, the compiler will take precedence" >&5
+$as_echo "$as_me: WARNING: boost/spirit/home/classic/phoenix.hpp: in the future, the compiler will take precedence" >&2;}
 
     ;;
 esac
-{ $as_echo "$as_me:$LINENO: checking for boost/spirit/phoenix.hpp" >&5
-$as_echo_n "checking for boost/spirit/phoenix.hpp... " >&6; }
+{ $as_echo "$as_me:$LINENO: checking for boost/spirit/home/classic/phoenix.hpp" >&5
+$as_echo_n "checking for boost/spirit/home/classic/phoenix.hpp... " >&6; }
 if test "${ac_cv_header_boost_spirit_phoenix_hpp+set}" = set; then
   $as_echo_n "(cached) " >&6
 else
@@ -18834,7 +18834,8 @@ $debug ||
 if test -n "$CONFIG_FILES"; then
 
 
-ac_cr=''
+ac_cr='
+'
 ac_cs_awk_cr=`$AWK 'BEGIN { print "a\rb" }' </dev/null 2>/dev/null`
 if test "$ac_cs_awk_cr" = "a${ac_cr}b"; then
   ac_cs_awk_cr='\\r'
