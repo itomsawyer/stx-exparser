@@ -59,6 +59,7 @@ enum parser_ids
     long_const_id,
     double_const_id,
     string_const_id,
+	regex_const_id,
     constant_id,
 
     function_call_id,
@@ -107,6 +108,7 @@ struct ExpressionGrammar : public grammar<ExpressionGrammar>
 		| long_const
 		| boolean_const
 		| string_const
+		| regex_const
 		;
 	    
 	    boolean_const
@@ -130,9 +132,12 @@ struct ExpressionGrammar : public grammar<ExpressionGrammar>
             string_const
                 = lexeme_d[
 		    token_node_d[ '"' >> *(c_escape_ch_p - '"') >> '"' ]
-                    ]
-                ;
+                    ];
 
+            regex_const
+            	= lexeme_d[
+            token_node_d[ "r\"" >> *(c_escape_ch_p - '"') >> "\"" ]
+        			];
 	    // *** Function call and function identifier
 
             function_call
@@ -276,6 +281,8 @@ struct ExpressionGrammar : public grammar<ExpressionGrammar>
         rule<ScannerT, parser_context<>, parser_tag<double_const_id> > 		double_const;
 	/// String constant rule: with quotes "abc"
         rule<ScannerT, parser_context<>, parser_tag<string_const_id> > 		string_const;
+    /// String constant rule: with regex quotes r"abc"
+		rule<ScannerT, parser_context<>, parser_tag<regex_const_id> > 		regex_const;
 
 	/// Function call rule: func1(a,b,c) where a,b,c is a list of exprs
         rule<ScannerT, parser_context<>, parser_tag<function_call_id> > 	function_call;
@@ -340,7 +347,9 @@ public:
 	: ParseNode(), value(type)
     {
 	// check whether to dequote the incoming string.
-	if (type == AnyScalar::ATTRTYPE_STRING)
+	if (type == AnyScalar::ATTRTYPE_REGEX) {
+		value.setStringQuoted(strvalue, true);
+	} else if (type == AnyScalar::ATTRTYPE_STRING)
 	    value.setStringQuoted(strvalue);
 	else
 	    value.setString(strvalue); // not a string, but an integer or double or boolean value
@@ -366,13 +375,15 @@ public:
     }
 
     /// String representation of the constant AnyScalar value.
-    virtual std::string toString() const
-    {
-	if (value.getType() == AnyScalar::ATTRTYPE_STRING) {
-	    return value.getStringQuoted();
+	virtual std::string toString() const
+	{
+		if (value.getType() == AnyScalar::ATTRTYPE_STRING) {
+			return value.getStringQuoted();
+		} else if (value.getType() == AnyScalar::ATTRTYPE_REGEX) {
+			return value.getStringQuoted("r\"","\"");
+		}
+		return value.getString();
 	}
-	return value.getString();
-    }
 };
 
 /// Parse tree node representing a variable place-holder. It is filled when
@@ -1030,6 +1041,13 @@ static ParseNode* build_expr(TreeIterT const& i)
 			      std::string(i->value.begin(), i->value.end()));
     }
 
+    case regex_const_id:
+	{
+		return new PNConstant(AnyScalar::ATTRTYPE_REGEX,
+				std::string(i->value.begin(), i->value.end()));
+	}
+
+
     // *** Arithmetic node cases
 
     case unary_expr_id:
@@ -1286,6 +1304,7 @@ static inline void tree_dump_xml(std::ostream &os, const std::string &input, con
     rule_names[long_const_id] = "long_const";
     rule_names[double_const_id] = "double_const";
     rule_names[string_const_id] = "string_const";
+	rule_names[regex_const_id] = "regex_const";
     rule_names[constant_id] = "constant";
 
     rule_names[function_call_id] = "function_call";
