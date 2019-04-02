@@ -1171,7 +1171,7 @@ static ParseNode* build_expr(TreeIterT const& i)
 	// construct a calculation node and check later.
 	std::auto_ptr<PNBinaryLogicExpr> node( new PNBinaryLogicExpr(left.release(), right.release(), logicop) );
 
-	if (constleft || constright)
+	if (constleft && constright)
 	{
 	    AnyScalar both(AnyScalar::ATTRTYPE_INVALID);
 
